@@ -1,4 +1,4 @@
-# Packet Tracer Lab: VLSM Subnetting, DHCP, Static Routing, and NAT/PAT
+# Network Design Project: VLSM Subnetting, DHCP, Static Routing, and NAT/PAT
 
 A Cisco Packet Tracer network built for a graduate networking course (John Jay College, M.S. Digital Forensics & Cybersecurity). It subnets a /24 block with VLSM, hands out addresses with DHCP, connects three LANs with static routing, and gives them Internet access through NAT overload. Verification output is in the evidence section.
 
@@ -10,17 +10,7 @@ A Cisco Packet Tracer network built for a graduate networking course (John Jay C
 
 ## Topology
 
-```
- Sales LAN (100 hosts)        Engineering LAN (50)
-   10.8.0.0/25                 10.8.0.128/26
-        \                         /
-         G0/0               G0/1
-              [ R1 ]--G0/2
-                       |  10.8.0.224/30
-                     G0/1
- Management LAN (20) -- G0/0 [ R2 ] G0/2 -- 203.0.113.0/30 -- [ ISP ] -- 198.51.100.0/24 -- Web/DNS server
-   10.8.0.192/27                  (NAT)
-```
+![Packet Tracer topology](evidence/00-topology.png)
 
 Three LANs (Sales and Engineering behind R1, Management behind R2). R2 connects to an ISP router, and the ISP connects to a web/DNS server.
 
